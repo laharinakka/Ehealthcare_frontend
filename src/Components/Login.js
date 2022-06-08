@@ -69,7 +69,7 @@ class Login extends React.Component {
     render() {
         return (
             <div style={{ margin: "auto", width: "50%" }} className="container">
-                <h1 align="center">FOODBOX Login</h1>
+                <h1 align="center">Medi Login</h1>
 
                 <br/><br/>
                 <form align="center">

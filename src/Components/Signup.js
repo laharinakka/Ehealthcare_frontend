@@ -25,7 +25,7 @@ class Signup extends React.Component{
         if(validEmail(this.user.email)){
             console.log("Now make a server call" , this.user)
             axios({
-                url:'http://localhost:8080/register',
+                url:'http://localhost:8080/Signup',
                 method:'post',
                 data:this.user
             }).then((response)=>{

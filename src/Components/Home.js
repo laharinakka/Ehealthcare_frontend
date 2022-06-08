@@ -6,7 +6,7 @@ const Home =() => {
         <div>
             {/* <h3> Home Page</h3> */}
             <br></br>
-            <h2 align="center">HAPPY TUMMY!!!! HAPPY YOU!!!</h2>
+            <h2 align="center">One stop destination for your medicines</h2>
 
             <br></br>
             <Carousel/>

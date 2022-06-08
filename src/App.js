@@ -13,6 +13,7 @@ import ItemUpdate from "./Components/ItemUpdate";
 import Signup from "./Components/Signup";
 import Login from "./Components/Login";
 import CustomerItems from "./Components/CustomerItems";
+import report from "./Components/Report";
 // import Header from "./Components/Header";
 // import Route from "react-router-dom/Route";
 import { useHistory } from "react-router-dom";
@@ -51,7 +52,7 @@ export default class App extends React.Component {
 
                 <div className="container">
                   <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <Link to={'/'} className="navbar-brand">FOODBOX</Link>
+                    <Link to={'/'} className="navbar-brand">Medicineonline</Link>
                     {this.state.loggedIn && <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                       <li>
                         <NavLink to='/home' className="nav-link text-white">Home</NavLink>
@@ -67,6 +68,7 @@ export default class App extends React.Component {
                       </li>
                       {this.state.isAdmin && <li> <NavLink to='/users' className="nav-link text-white">Users (Admin Only)</NavLink></li>}
                       {this.state.isAdmin && <li><NavLink to='/items' className="nav-link text-white">Items (Admin Only)</NavLink></li>}
+                      {this.state.isAdmin && <li><NavLink to='/report' className="nav-link text-white">report (Admin Only)</NavLink></li>}
                     </ul>}
 
                     {/* {!localStorage.getItem('isLoggedIn') && <NavLink to='/signup' className="nav-link text-white">Signup</NavLink>}
@@ -108,9 +110,9 @@ export default class App extends React.Component {
 
             */}
 
-            {/* <Link to='/'>Home</Link> |
+            { <Link to='/'>Home</Link> |
             <Link to='/about'>About</Link> |
-            <Link to='/contact'>Contact</Link> */}
+            <Link to='/contact'>Contact</Link> }
           </div>
 
           <div>
@@ -130,6 +132,7 @@ export default class App extends React.Component {
             <Route path='/signup' component={Signup} />
             <Route path='/login' component={Login} />
             <Route path='/payment' component={Payment} />
+            <Route path='/report' component={report} />
             <Route path='/customer/:name' render={({ match }) => (this.state.isloggedIn ? (<Customer name={match.params.name} />) : (<Redirect to='/' />))} />
           </div>
         </Router>
